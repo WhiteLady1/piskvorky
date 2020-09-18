@@ -12,18 +12,18 @@ body{
 
 .celek{
   width: 350px;
+  height: 576px;
   background-color: #283e50;
   margin: 10px;
-}
-
-.uvod{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 img{
   max-width: 100%;;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
 }
 
 h1{
