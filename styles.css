@@ -1,14 +1,21 @@
 body{
-color: #ffffff;
-background-image: linear-gradient(#615dad, #ffc8da);
-text-align: center;
-font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  background-image: linear-gradient(#615dad, #ffc8da);
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  margin: 0;
 }
 
 .celek{
-  width: 370px;
+  width: 350px;
   background-color: #283e50;
+  margin: 10px;
 }
+
 .uvod{
   display: flex;
   flex-direction: column;
@@ -22,15 +29,21 @@ img{
 h1{
   font-family: 'Lobster', cursive;
   font-size: 50px;
-  margin: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 0;
 }
 p{
   padding: 10px;
   margin: 0;
 }
 
+.tlacitka{
+  padding-top: 10px;
+}
+
 ul{
-  padding: 0;
+  padding: 0px;
 }
 
 li{
@@ -42,11 +55,14 @@ a{
   display: block;
   text-decoration: none;
   color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .pravidla{
   background-color: #1fcca4;
   width: 100%;
+  border-bottom: 1px solid #283e50;
 }
 .pravidla:hover{
   background-color: #1cbb96;
