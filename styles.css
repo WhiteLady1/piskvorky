@@ -1,0 +1,44 @@
+body{
+color: #ffffff;
+background-image: linear-gradient(#615dad, #ffc8da);
+text-align: center;
+}
+
+.uvod{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #283e50;
+}
+
+
+
+h1{
+  font-family: 'Lobster', cursive;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.pravidla{
+  background-color: #1fcca4;
+}
+.pravidla:hover{
+  background-color: #1cbb96;
+}
+
+.hra{
+  background-color: #0197f6;
+}
+.hra:hover{
+  background-color: #0090e9;
+}
