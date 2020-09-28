@@ -76,15 +76,12 @@ p{
   background-color: #0090e9;
 }
 
-.celek--pravidla {
-  padding: 10px;
-}
 
 .celek--pravidla ol{
   margin-left: 25px;
   margin-right: 35px;
 }
-.celek--pravidla li{
+.celek--pravidla .list li{
   text-align: left;
   margin-bottom: 18px;
   padding-left: 10px;
@@ -97,11 +94,12 @@ p{
   filter: invert();
 }
 
-.celek--pravidla .gallery{
+.celek--pravidla figure{
   padding-top: 30px;
+  margin: 10px 25px 10px 25px;
+  font-style: italic;
 }
 .celek--pravidla img{
-  width: 90%;
   border-radius: 0;
 }
 
