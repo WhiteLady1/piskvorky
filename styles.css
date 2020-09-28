@@ -7,12 +7,12 @@ body{
   color: #ffffff;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
 }
 
 .celek{
-  margin: 30px auto;
+  margin: 60px auto;
   width: 350px;
   background-color: #283e50;
   border-top-left-radius: 5px;
@@ -76,6 +76,32 @@ p{
   background-color: #0090e9;
 }
 
-.celek--pravidla{
-
+.celek--pravidla {
+  padding: 10px;
 }
+
+.celek--pravidla ol{
+  margin-left: 25px;
+  margin-right: 35px;
+}
+.celek--pravidla li{
+  text-align: left;
+  margin-bottom: 18px;
+  padding-left: 10px;
+  line-height: 18px;
+}
+
+.celek--pravidla .symbol{
+  width: 1em;
+  height: 1em;
+  filter: invert();
+}
+
+.celek--pravidla .gallery{
+  padding-top: 30px;
+}
+.celek--pravidla img{
+  width: 90%;
+  border-radius: 0;
+}
+
