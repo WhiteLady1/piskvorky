@@ -44,16 +44,16 @@ p{
   padding-top: 10px;
 }
 
-ul{
+.tlacitka ul{
   padding: 0px;
 }
 
-li{
+.tlacitka li{
   list-style: none;
   padding: 0;
 }
 
-a{
+.tlacitka a{
   display: block;
   text-decoration: none;
   color: #ffffff;
@@ -61,19 +61,19 @@ a{
   padding-bottom: 10px;
 }
 
-.pravidla{
+li .pravidla{
   background-color: #1fcca4;
   width: 100%;
   border-bottom: 1px solid #283e50;
 }
-.pravidla:hover{
+li .pravidla:hover{
   background-color: #1cbb96;
 }
 
-.hra{
+li .hra{
   background-color: #0197f6;
   width: 100%;
 }
-.hra:hover{
+li .hra:hover{
   background-color: #0090e9;
 }
