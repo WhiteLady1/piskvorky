@@ -113,6 +113,35 @@ p{
 
 .celek--hra{
   background-color: transparent;
+  max-width: 80vmin;
+  width: auto;
+}
+
+.celek--hra__info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hra--hrac{
+  display: flex;
+}
+.hra--hrac .symbol{
+  filter: invert();
+}
+
+.celek--hra__pole{
+  display: grid;
+  grid-template-columns: repeat(10, 10fr);
+  grid-template-rows: repeat(10, 10fr);
+  opacity: 0.5;
+  box-shadow: 0px 0px 1px 1px black;
+}
+
+.celek--hra__pole button{
+  width: 8vmin;
+  height: 8vmin;
+  padding: 0;
+  border: 1px solid black;
 }
 
 @media screen and (min-width:650px){
