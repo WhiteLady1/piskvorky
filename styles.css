@@ -6,7 +6,7 @@ html{
 body{
   color: #ffffff;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   margin: 0;
 }
@@ -115,11 +115,14 @@ p{
   background-color: transparent;
   max-width: 80vmin;
   width: auto;
+  
 }
 
 .celek--hra__info{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 20px 0;
 }
 
 .hra--hrac{
@@ -127,6 +130,18 @@ p{
 }
 .hra--hrac .symbol{
   filter: invert();
+  padding-left: 10px;
+  }
+
+.hra--button{
+  display: flex;
+}
+
+.hra--button a{
+  padding: 12px 10px 12px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  border-bottom: none;
 }
 
 .celek--hra__pole{
@@ -148,9 +163,7 @@ p{
   background-color: white;
 }
 
-.hra--button{
-  padding: 10px;
-}
+
 
 @media screen and (min-width:650px){
   .celek--pravidla{
