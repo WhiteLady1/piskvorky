@@ -161,6 +161,7 @@ p{
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
+
 }
 
 .celek--hra__pole button:hover,:focus{
@@ -169,11 +170,11 @@ p{
 
 
 .board__field--circle {
-  background: url('images/circle.svg');
+  background-image: url('images/circle.svg');
 }
 
 .board__field--cross {
-  background: url('images/cross.svg');
+  background-image: url('images/cross.svg');
 }
 
 
