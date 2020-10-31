@@ -3,33 +3,46 @@
 let player = 'circle'
 const playDesc=document.querySelectorAll('button')
 let symbolPlayer=document.querySelector('.symbol')
-
 const activePayer=(event)=>{
-  let pozice=getPosition(event.target)
-  let prvek=getField(pozice.row, pozice.column)
-    if (player==='circle') {
-      event.target.classList.add('board__field--circle')
-      event.target.disabled=true
-      player='cross'
-      symbolPlayer.src="images/cross.svg"
-      symbolPlayer.alt="Hraje křížek"
-      console.log(pozice);
-      console.log(prvek);
-      console.log(getSymbol(prvek));
-      console.log(isWinningMove(event.target))
-    } else {
-      event.target.classList.add('board__field--cross')
-      event.target.disabled=true
-      player='circle'
-      symbolPlayer.src="images/circle.svg"
-      symbolPlayer.alt="Hraje kolečko"
-      console.log(pozice);
-      console.log(prvek);
-      console.log(getSymbol(prvek));
-      console.log(isWinningMove(event.target))
-    }
+  if (player==='circle') {
+    event.target.classList.add('board__field--circle')
+    event.target.disabled=true
+    winer(isWinningMove(event.target))
+    player='cross'
+    symbolPlayer.src="images/cross.svg"
+    symbolPlayer.alt="Hraje křížek"
+  } else {
+    event.target.classList.add('board__field--cross')
+    event.target.disabled=true
+    winer(isWinningMove(event.target))
+    player='circle'
+    symbolPlayer.src="images/circle.svg"
+    symbolPlayer.alt="Hraje kolečko"
+  }
 }
-//Doplnění na úkol č.5 => vrátí souřadnice kde jsem klikla
+
+const message=(text)=>{
+  const newMess=confirm(text)
+  if(newMess===true){
+    location.reload();
+  } 
+}
+//Je výhera a alert
+const winer =(x)=>{
+    if(x===true){
+      switch (player) {
+        case 'circle':
+          setTimeout(()=>
+          message(`The winner is: circle`),10)
+          break;
+          default:
+            setTimeout(()=>
+            message(`The winner is: cross`),10)
+          break;
+      }
+     }
+}
+//Vrátí souřadnice kde jsem klikla
 const boardSize = 10 // 10x10
 
 const getPosition = (field) => {
@@ -46,10 +59,10 @@ const getPosition = (field) => {
 		column: fieldIndex % boardSize,
 	}
 }
-//
+
 //Pro číslo řádku a sloupce vrátí prvek
 const getField = (row, column) => playDesc[row * boardSize + column]
-//
+
 //Pro políčko s křížkem/kolečkem vrátí řetězec 'cros'/'circle'
 const getSymbol = (field) => {
 	// Název třídy přizpůsob tvému kódu.
@@ -59,7 +72,6 @@ const getSymbol = (field) => {
 		return 'circle'
 	}
 }
-//
 
 //Testování výhry
 const symbolsToWin = 5
