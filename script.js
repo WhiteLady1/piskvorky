@@ -7,7 +7,6 @@ let symbolPlayer=document.querySelector('.symbol')
 const activePayer=(event)=>{
   let pozice=getPosition(event.target)
   let prvek=getField(pozice.row, pozice.column)
-  let symbolPrvku=getSymbol(prvek)
     if (player==='circle') {
       event.target.classList.add('board__field--circle')
       event.target.disabled=true
@@ -16,7 +15,8 @@ const activePayer=(event)=>{
       symbolPlayer.alt="Hraje křížek"
       console.log(pozice);
       console.log(prvek);
-      console.log(symbolPrvku);
+      console.log(getSymbol(prvek));
+      console.log(isWinningMove(event.target))
     } else {
       event.target.classList.add('board__field--cross')
       event.target.disabled=true
@@ -25,8 +25,8 @@ const activePayer=(event)=>{
       symbolPlayer.alt="Hraje kolečko"
       console.log(pozice);
       console.log(prvek);
-      console.log(symbolPrvku);
-
+      console.log(getSymbol(prvek));
+      console.log(isWinningMove(event.target))
     }
 }
 //Doplnění na úkol č.5 => vrátí souřadnice kde jsem klikla
@@ -60,6 +60,61 @@ const getSymbol = (field) => {
 	}
 }
 //
+
+//Testování výhry
+const symbolsToWin = 5
+const isWinningMove = (field) => {
+	const origin = getPosition(field)
+	const symbol = getSymbol(field)
+
+	let i
+
+	let inRow = 1 // Jednička pro právě vybrané políčko
+	// Koukni doleva
+	i = origin.column
+	while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
+		inRow++
+		i--
+	}
+
+	// Koukni doprava
+	i = origin.column
+	while (
+		i < boardSize - 1 &&
+		symbol === getSymbol(getField(origin.row, i + 1))
+	) {
+		inRow++
+		i++
+	}
+
+	if (inRow >= symbolsToWin) {
+		return true
+	}
+
+	let inColumn = 1
+	// Koukni nahoru
+	i = origin.row
+	while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
+		inColumn++
+		i--
+	}
+
+	// Koukni dolu
+	i = origin.row
+	while (
+		i < boardSize - 1 &&
+		symbol === getSymbol(getField(i + 1, origin.column))
+	) {
+		inColumn++
+		i++
+	}
+
+	if (inColumn >= symbolsToWin) {
+		return true
+	}
+
+	return false
+}
 for (let i = 0; i < playDesc.length; i++) {
   playDesc[i].addEventListener('click', activePayer)
 }
